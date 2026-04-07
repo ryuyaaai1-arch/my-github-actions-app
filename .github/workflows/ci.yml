@@ -24,7 +24,7 @@ jobs:
           sleep 5
           curl localhost:8080
 
-      - name: deploy ke EC2
+      - name: RYUUU
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.EC2_HOST }}
