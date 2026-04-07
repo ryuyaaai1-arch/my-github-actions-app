@@ -12,3 +12,14 @@ jobs:
     steps:
       - name: ambil kode
         uses: actions/checkout@v3
+
+      - name: build docker
+        run: docker build -t myapp .
+
+      - name: run container
+        run: docker run -d -p 8080:80 myapp
+
+      - name: test web
+        run: |
+          sleep 5
+          curl localhost:8080
