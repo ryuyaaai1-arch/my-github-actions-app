@@ -6,9 +6,15 @@ on:
       - main
 
 jobs:
+  awal:
+    runs-on: ubuntu-latest
+    steps:
+      - name: tulis log
+        run: echo "belajar github actions"
+        
   test:
     runs-on: ubuntu-latest
-
+    
     steps:
       - name: ambil kode
         uses: actions/checkout@v3
